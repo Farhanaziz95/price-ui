@@ -98,7 +98,7 @@ export default function Home() {
             </Card>
           </Box>
 
-          <Flex position={{base:"absoulte",lg:"fixed"}} direction={{ base: 'column', lg: 'row' }} w={['100%',"80%"]} bottom={["0","20"]} mt={{base:"6",lg:"1"}} left="36" justifyContent="space-around">
+          <Flex position={{base:"absolute",lg:"fixed"}} direction={{ base: 'column', lg: 'row' }} w={['100%',"80%"]} bottom={["0","20"]} mt={{base:"6",lg:"1"}} left="36" justifyContent="space-around">
             <Flex pb={{base:'6'}}>
               <Image
                 src='/guardstar.png'

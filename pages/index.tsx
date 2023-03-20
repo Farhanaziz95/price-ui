@@ -98,7 +98,7 @@ export default function Home() {
             </Card>
           </Box>
 
-          <Flex position={{base:"absolute",lg:"fixed"}} direction={{ base: 'column', lg: 'row' }} w={['100%',"80%"]} bottom={["0","20"]} mt={{base:"6",lg:"1"}} left="36" justifyContent="space-around">
+          <Flex position={{base:"initial",lg:"fixed"}} direction={{ base: 'column', lg: 'row' }} w={['100%',"80%"]} bottom={["0","20"]} mt={{base:"6",lg:"1"}} left="36" justifyContent="space-around">
             <Flex pb={{base:'6'}}>
               <Image
                 src='/guardstar.png'
@@ -124,6 +124,8 @@ export default function Home() {
               <Image
                 src='/roundcircle.png'
                 alt='guard star icon'
+                w="46px"
+                h="46px"
               />
               <Text w="-webkit-fill-available" pl="3" pt="0.5" fontWeight="bold" fontSize="small">
                 No monthly subscription

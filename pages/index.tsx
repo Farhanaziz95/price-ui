@@ -17,13 +17,13 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Box>
-        <Flex direction={{ base: 'column', lg: 'column' }}>
-          <Box height="50vh" w="100%" bg="#6B46C1"></Box>
-          <Box height="50vh" w="100%" bg="#fff"></Box>
+      <Box h="2xl">
+        <Flex h="2xl" direction={{ base: 'column', lg: 'column' }}>
+          <Box h="50%" w="100%" bg="#6B46C1"></Box>
+          <Box h="50%" w="100%" bg="#fff"></Box>
         </Flex>
-        <Container>
-          <Box position="absolute" zIndex="2" left={{base:"3",lg:"72"}} top={[14,0,24]}>
+
+          <Box position="absolute" zIndex="2" left={{base:"3",lg:"64"}} top={[14,0,24]}>
             <Center>
               <Heading color="white" pb="4">
                 Simple pricing for your business
@@ -99,45 +99,48 @@ export default function Home() {
 
             <Box pt="8" w="100%">
           <Flex position={{base:"initial",lg:"static"}} direction={{ base: 'column', lg: 'row' }} w={['100%',"100%"]} bottom={["0","20"]} mt={{base:"6",lg:"1"}} left="36" justifyContent="space-around">
-            <Box pb={{base:'6'}}>
+            <Flex pr="8" pb={{base:'6'}}>
               <Image
                 src='/guardstar.png'
                 alt='guard star icon'
+                w="46px"
+                h="46px"
               />
-              <Text w={['-moz-fit-content',"-webkit-fill-available"]} pl="3" pt="0.5" fontWeight="bold" fontSize="small">
+              <Text alignSelf="center" w={['-moz-fit-content',"-webkit-fill-available"]} pl="3" pt="0.5" fontWeight="bold" fontSize="small">
                 30 days money back  Guarantee
               </Text>
-            </Box>
+            </Flex>
 
-            <Box pb={{base:'6'}}>
+            <Flex pb={{base:'6'}}>
               <Image
                 src='/pricetagstar.png'
                 alt='guard star icon'
+                w="46px"
+                h="46px"
               />
-              <Text w="-webkit-fill-available" pl="3" pt="0.5" fontWeight="bold" fontSize="small">
+              <Text alignSelf="center" w="-webkit-fill-available" pl="3" pt="0.5" fontWeight="bold" fontSize="small">
                 No setup fees 
                 100% hassle-free
               </Text>
-            </Box>
+            </Flex>
 
-            <Box>
+            <Flex pl={{base:'0' ,lg:"10"}} pb={{base:'6'}}>
               <Image
                 src='/roundcircle.png'
                 alt='guard star icon'
                 w="46px"
                 h="46px"
               />
-              <Text w="-webkit-fill-available" pl="3" pt="0.5" fontWeight="bold" fontSize="small">
+              <Text alignSelf="center" w="-webkit-fill-available" pl="3" pt="0.5" fontWeight="bold" fontSize="small">
                 No monthly subscription
                 Pay once and for all
               </Text>
-            </Box>
+            </Flex>
           </Flex>
           </Box> 
           </Box>
           
-        </Container>
-
+        
       </Box>
     </>
   )

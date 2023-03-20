@@ -1,7 +1,9 @@
+import { Box, Button, Card, CardBody, CardFooter, CardHeader, Center, Circle, Container, Flex, Heading, Image, List, ListIcon, ListItem, Spacer, Square, Stack, Text } from '@chakra-ui/react'
+
+import { FaCheckCircle } from "react-icons/fa";
 import Head from 'next/head'
-import Image from 'next/image'
 import { Inter } from 'next/font/google'
-import styles from '@/affistyles/Home.module.css'
+import styles from '../styles/Home.module.css'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -14,110 +16,123 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={styles.main}>
-        <div className={styles.description}>
-          <p>
-            Get started by editing&nbsp;
-            <code className={styles.code}>pages/index.tsx</code>
-          </p>
-          <div>
-            <a
-              href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
+
+      <Box>
+        <Flex direction="column">
+          <Box height="50vh" w="100%" bg="#6B46C1"></Box>
+          <Box height="50vh" w="100%" bg="#fff"></Box>
+        </Flex>
+        <Container>
+          <Box position="fixed" zIndex="2" left="72" top="24">
+            <Center>
+              <Heading color="white" pb="4">
+                Simple pricing for your business
+          </Heading>
+            </Center>
+            <Center>
+              <Text color="white" pb="8">Plans that are carefully crafted to suit your business.</Text>
+            </Center>
+            <Card
+              direction={{ base: 'column', sm: 'row' }}
+              overflow='hidden'
+              variant='outline'
+
+
             >
-              By{' '}
+              <Stack p="2" pb="4" bg="#F0EAFB" w="40%">
+                <CardBody>
+                  <Center>
+                    <Text
+                      fontSize="16"
+                      fontWeight="bold"
+                    >Premium Pro</Text>
+                  </Center>
+                  <Center>
+                    <Heading
+                      pt="2"
+                    >$329</Heading>
+                  </Center>
+                  <Center>
+                    <Text
+                      fontSize="small"
+                      pt="1"
+                      pb="3"
+                    >billed just once</Text>
+                  </Center>
+                  <Center>
+                    <Button colorScheme='purple'>Get Started</Button>
+                  </Center>
+                </CardBody>
+              </Stack>
+
+              <Stack>
+                <CardBody>
+
+                  <Text py='2' px="4">
+                    Access these features when you get this pricing package for your business.
+      </Text>
+                  <List pl="4" pb="4" spacing={3}>
+                    <ListItem fontSize="small">
+                      <ListIcon as={FaCheckCircle} color='#652CD3' />
+                      International calling and messaging API
+  </ListItem>
+
+                    <ListItem fontSize="small">
+                      <ListIcon as={FaCheckCircle} color='#652CD3' />
+                      Additional phone numbers
+  </ListItem>
+                    <ListItem fontSize="small">
+                      <ListIcon as={FaCheckCircle} color='#652CD3' />
+                      Automated messages via Zapier
+  </ListItem>
+                    {/* You can also use custom icons from react-icons */}
+                    <ListItem fontSize="small">
+                      <ListIcon as={FaCheckCircle} color='#652CD3' />
+                      24/7 support and consulting
+  </ListItem>
+                  </List>
+                </CardBody>
+
+              </Stack>
+            </Card>
+          </Box>
+
+          <Flex position="fixed" w="80%" bottom="20" left="36" justifyContent="space-around">
+            <Flex>
               <Image
-                src="/vercel.svg"
-                alt="Vercel Logo"
-                className={styles.vercelLogo}
-                width={100}
-                height={24}
-                priority
+                src='/guardstar.png'
+                alt='guard star icon'
               />
-            </a>
-          </div>
-        </div>
+              <Text  w="-webkit-fill-available"pl="3" pt="0.5" fontWeight="bold" fontSize="small">
+                30 days money back <br /> Guarantee
+              </Text>
+            </Flex>
 
-        <div className={styles.center}>
-          <Image
-            className={styles.logo}
-            src="/next.svg"
-            alt="Next.js Logo"
-            width={180}
-            height={37}
-            priority
-          />
-          <div className={styles.thirteen}>
-            <Image
-              src="/thirteen.svg"
-              alt="13"
-              width={40}
-              height={31}
-              priority
-            />
-          </div>
-        </div>
+            <Flex>
+              <Image
+                src='/pricetagstar.png'
+                alt='guard star icon'
+              />
+              <Text  w="-webkit-fill-available" pl="3" pt="0.5" fontWeight="bold" fontSize="small">
+                No setup fees <br />
+100% hassle-free
+              </Text>
+            </Flex>
 
-        <div className={styles.grid}>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Docs <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Find in-depth information about Next.js features and&nbsp;API.
-            </p>
-          </a>
+            <Flex>
+              <Image
+                src='/roundcircle.png'
+                alt='guard star icon'
+              />
+              <Text w="-webkit-fill-available" pl="3" pt="0.5" fontWeight="bold" fontSize="small">
+                No monthly subscription <br />
+Pay once and for all
+              </Text>
+            </Flex>
+          </Flex>
+        </Container>
 
-          <a
-            href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Learn <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Learn about Next.js in an interactive course with&nbsp;quizzes!
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Templates <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Discover and deploy boilerplate example Next.js&nbsp;projects.
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Deploy <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Instantly deploy your Next.js site to a shareable URL
-              with&nbsp;Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
+      </Box>
     </>
   )
 }
